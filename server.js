@@ -16,6 +16,9 @@ app.get("/bfhl", (req, res) => {
     return res.status(200).json({ operation_code: 1 });
 });
 
+
+
+
 // POST request - Process input data
 app.post("/bfhl", (req, res) => {
     try {
@@ -55,6 +58,13 @@ app.post("/bfhl", (req, res) => {
     }
 });
 
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the BFHL API!");
+});
+
 // Start Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
